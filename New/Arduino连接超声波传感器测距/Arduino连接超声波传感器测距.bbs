@@ -1,0 +1,15 @@
+<P align=center><FONT size=3>Arduino连接超声波传感器测距</FONT></P>
+<P><BR><BR>超声波传感器适用于对大幅的平面进行静止测距。普通的超声波传感器测距范围大概是2cm~450cm，分辨率3mm（淘宝卖家说的，笔者测试环境没那么好，个人实测比较稳定的距离10cm~2m左右，超过此距离就经常有偶然不准确的情况发生了，当然不排除笔者技术问题。）<BR><BR>测试对象是淘宝上面最便宜的SR-04超声波传感器，有四个脚：5v电源脚（Vcc），触发控制端（Trig），接收端（Echo），地端（GND） </P>
+<P><BR>模块工作原理： </P>
+<UL>
+<LI>采用IO触发测距，给至少10us的高电平信号；</LI>
+<LI>模块自动发送8个40KHz的方波，自动检测是否有信号返回；</LI>
+<LI>有信号返回，通过IO输出一高电平，高电平持续的时间就是超声波从发射到返回的时间．测试距离=(高电平时间*声速(340m/s))/2; <BR></LI></UL>
+<P>电路连接方法：</P>
+<P>&nbsp;</P>
+<P>Arduino程序例子：</P>
+<DIV style="BORDER-BOTTOM: #cccccc 1px dashed; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 100%; BORDER-TOP: #cccccc 1px dashed; BORDER-RIGHT: #cccccc 1px dashed">
+<TABLE style="BACKGROUND-COLOR: #efefef; WIDTH: 100%; FONT-FAMILY: Courier New" border=0 cellSpacing=8>
+<TBODY>
+<TR>
+<TD style="FONT-FAMILY: Consolas; FONT-SIZE: 90%; VERTICAL-ALIGN: text-top"><SPAN style="COLOR: rgb(0,0,255)">const</SPAN> <SPAN style="COLOR: rgb(0,0,255)">int</SPAN> TrigPin = <SPAN style="COLOR: rgb(255,0,0)">2</SPAN>; <BR><SPAN style="COLOR: rgb(0,0,255)">const</SPAN> <SPAN style="COLOR: rgb(0,0,255)">int</SPAN> EchoPin = <SPAN style="COLOR: rgb(255,0,0)">3</SPAN>; <BR><SPAN style="COLOR: rgb(0,0,255)">float</SPAN> cm; <BR><SPAN style="COLOR: rgb(0,0,255)">void</SPAN> setup() <BR>{ <BR>Serial.begin(<SPAN style="COLOR: rgb(255,0,0)">9600</SPAN>); <BR>pinMode(TrigPin, OUTPUT); <BR>pinMode(EchoPin, INPUT); <BR>} <BR><SPAN style="COLOR: rgb(0,0,255)">void</SPAN> loop() <BR>{ <BR>digitalWrite(TrigPin, LOW); <SPAN style="COLOR: rgb(0,128,0)">//低高低电平发一个短时间脉冲去TrigPin </SPAN><BR>delayMicroseconds(<SPAN style="COLOR: rgb(255,0,0)">2</SPAN>); <BR>digitalWrite(TrigPin, HIGH); <BR>delayMicroseconds(<SPAN style="COLOR: rgb(255,0,0)">10</SPAN>); <BR>digitalWrite(TrigPin, LOW); <BR><BR>cm = pulseIn(EchoPin, HIGH) / <SPAN style="COLOR: rgb(255,0,0)">58</SPAN>; <SPAN style="COLOR: rgb(0,128,0)">//将回波时间换算成cm </SPAN><BR>cm = (<SPAN style="COLOR: rgb(0,0,255)">int</SPAN>(cm * <SPAN style="COLOR: rgb(255,0,0)">100</SPAN>)) / <SPAN style="COLOR: rgb(255,0,0)">100</SPAN>; <SPAN style="COLOR: rgb(0,128,0)">//保留两位小数 </SPAN><BR>Serial.print(cm); <BR>Serial.print(<SPAN style="COLOR: rgb(163,21,21)">"cm"</SPAN>); <BR>Serial.println(); <BR>delay(<SPAN style="COLOR: rgb(255,0,0)">1000</SPAN>); <BR>} <BR></TD></TR></TBODY></TABLE></DIV>

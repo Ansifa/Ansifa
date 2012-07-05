@@ -1,0 +1,10 @@
+Arduino价格太贵了，下面我们用最小系统再做一次，既能减小体积，又能降低成本。
+
+材料：
+ATMega8L或者ATMega8  x1
+68Ω电阻 x2 (没有68Ω的话，用50~100Ω电阻也行)
+2.2kΩ电阻 x1 (没有2.2kΩ的话，用2.2k~10kΩ电阻也行)
+USB连接线（一端是USB口，另一端是电线） x1
+
+可以将ATMega8L插在块Arduino Duemilanove上面，再加一个普通的USBASP到Arduino的ICSP口给ATMega8L下载程序。由于电路时间精度不高，建议使用8M内置振荡器。省了一个外置晶振。
+固件和大概的烧写方法可以参看http://aguegu.net/?p=699的介绍。这里就不再详述（注意，阿古的文章中有一处需要修改，就是原来的atmega8_8M.upload.protocol=arduino应该改为atmega8_8M.upload.protocol=stk500）。

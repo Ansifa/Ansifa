@@ -1,0 +1,7 @@
+<P align=center><FONT size=3>Arduino红外遥控发射接收（第一部分：红外解码）</FONT></P>
+<P>通过连接红外接收头，我们可以使用Arduino识别一般家用电视机，DVD等遥控器的红外信号。并且能按照不同的信号识别键值；如果连接红外发射管的话，我们可以通过控制红外发光管的亮灭去传输数据，控制电视机，DVD等家电的遥控开关机等。<BR><BR>需要材料：<BR>1. Arduino任意版本一块<BR>2. 红外遥控器一个，家用电器的遥控、淘宝上面的MP3遥控都可以<BR>3. 红外接收传感器一个</P>
+<P><IMG src="http://www.ladyada.net/wiki/lib/exe/fetch.php?hash=03248f&amp;w=391&amp;h=441&amp;media=http%3A%2F%2Fwww.ladyada.net%2Fimages%2Fsensors%2Fpna4602pinout.gif"><IMG src="http://www.ladyada.net/wiki/lib/exe/fetch.php?hash=c13908&amp;w=500&amp;h=385&amp;media=http%3A%2F%2Fwww.ladyada.net%2Fimages%2Fsensors%2Fpna4602_t.jpg"></P>
+<P><BR><BR>电路连接：<BR><BR><IMG src="http://www.ladyada.net/wiki/lib/exe/fetch.php?hash=38859c&amp;w=618&amp;h=416&amp;media=http%3A%2F%2Fwww.ladyada.net%2Fimages%2Fsensors%2Farduinopna4602.gif"></P>
+<P>代码示例：</P>
+<P>1、最简单的脉冲接收：</P>
+<P>&nbsp;</P>

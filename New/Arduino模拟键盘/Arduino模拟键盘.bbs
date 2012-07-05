@@ -1,0 +1,37 @@
+Arduino模拟键盘+MakeyMakey触控键盘仿制教程<BR><BR>相信很多人看过最近一个Makey makey触控键盘视频（http://www.56.com/u45/v_NjgzMzc0MDI.html）。视频里电路板可以接上任何导电体，通过触摸导电体去给电脑键盘事件。来玩各种不同的游戏或者效果。<BR>其中的原理就是通过单片机模拟一个键盘，引出几个键，并且使用触摸形式代替开关。<BR>现在我们使用一块arduino加上几个普通元件，也能将这个电路实现出来了。<BR><BR>材料清单：<BR>Arduino x1<BR>68Ω电阻 x2 (没有68Ω的话，用50~100Ω电阻也行)<BR>2.2kΩ电阻 x1 (没有2.2kΩ的话，用2.2k~10kΩ电阻也行)<BR>USB连接线（一端是USB口，另一端是电线） x1<BR><BR>电路原理图：<BR><IMG src="file:///C:/Program%20Files/WYSIWYG%20BBCode%20Editor/res/-"><BR><BR>Arduino支持库文件：<BR>http://soft1.wmzhe.com/download/Ansifa2012/Arduino/UsbKeyboard.zip<BR>文件下载后解压到arduino程序文件夹下面的ibraries下面。<BR><BR>程序示例：<BR>下面的例子演示了用Arduino虚拟键盘的应用例子。打开记事本，然后将Arduino的D12引脚和GND连起来，就会打印HELLO WORLD字样。<BR><PRE>#include "UsbKeyboard.h"
+int KEYPIN = 3;
+void setup()
+{
+    pinMode(KEYPIN, INPUT);
+    digitalWrite(KEYPIN, HIGH);
+    TIMSK0 &amp;= !(1 &lt;&lt; TOIE0);
+}
+void loop()
+{
+    UsbKeyboard.update();
+    if(digitalRead(KEYPIN) == LOW)
+    {
+        delay(20);
+        if(digitalRead(KEYPIN) == HIGH)
+        {
+            UsbKeyboard.sendKeyStroke(KEY_H);
+            UsbKeyboard.sendKeyStroke(KEY_E);
+            UsbKeyboard.sendKeyStroke(KEY_L);
+            UsbKeyboard.sendKeyStroke(KEY_L);
+            UsbKeyboard.sendKeyStroke(KEY_O);
+            UsbKeyboard.sendKeyStroke(KEY_SPACE);
+            UsbKeyboard.sendKeyStroke(KEY_W);
+            UsbKeyboard.sendKeyStroke(KEY_O);
+            UsbKeyboard.sendKeyStroke(KEY_R);
+            UsbKeyboard.sendKeyStroke(KEY_L);
+            UsbKeyboard.sendKeyStroke(KEY_D);
+            UsbKeyboard.sendKeyStroke(KEY_ENTER);
+        }
+    }
+}
+</PRE>
+<P>&nbsp;</P>
+<P>实物例子：</P>
+<P>&nbsp;</P>
+<P>———————————————————— 分割线 ————————————————————————————————————————</P>
+<P>键盘模拟器我们做好了，下面再回头看看文章开头的Makey makey触控键盘，其实他就是一个由单片机模拟的键盘，有6个引出脚，在视频里面分别是"上、下、左、右、Space、Click"。</P>

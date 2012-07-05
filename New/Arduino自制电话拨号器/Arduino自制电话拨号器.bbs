@@ -1,0 +1,14 @@
+<P><STRONG>Arduino自制电话拨号器</STRONG></P>
+<P>怎么拨打电话？也许这个问题很简单：拿起话筒，按话机的数字键盘拨号码。<BR>但是，有没想过，我们可以拿起电话，不需要碰话机键盘就能拨通电话？答案是肯定的。<BR>下面就介绍如何用Arduino生成双音多频信号。</P>
+<P><STRONG>用法介绍：<BR></STRONG>使用时候，我们拿起电话话筒，<STRONG>将喇叭贴近话筒麦克风位置</STRONG>。在串口发送需要拨号的电话号码（比如10000），稍等片刻即可拨通。</P>
+<P><STRONG>扩展用法：<BR></STRONG>驱动开关模拟电话摘机事件，再拨号，再按照事件控制语音模块发出不同的语音到电话线（WT588D）。即可完成一个整体的自动拨号机，可以制作报警器，或者电话提醒器。</P>
+<P><STRONG>材料清单：<BR></STRONG>Arduino一块，<BR>喇叭1个，<BR>100Ω电阻1个（可以选择100Ω~1kΩ），<BR>1uF电容两个（可以选择0.1uF~10uF）。</P>
+<P><STRONG>硬件连接：</STRONG></P>
+<P><STRONG>程序代码：</STRONG></P>
+<P>1. 下载Tone库，并且解压到arduino-0022\libraries文件夹：<BR><A href="http://rogue-code.googlecode.com/files/Arduino-Library-Tone.zip">http://rogue-code.googlecode.com/files/Arduino-Library-Tone.zip</A></P>
+<P>2.写入下面代码到Arduino：</P>
+<P>&nbsp;</P>
+<P><STRONG>实物效果：</STRONG></P>
+<P>1. 电路连接</P>
+<P>2. 喇叭靠近电话拨号</P>
+<P>3. 串口端</P>

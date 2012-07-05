@@ -1,0 +1,16 @@
+<P align=center><FONT size=3>Arduino 连接 DS1302时钟模块</FONT></P>
+<P><BR>DS1302是maxim美信生产的时钟模块，支持年、月、日、时、分、秒、星期显示。支持为后备电池涓流充电。可以。跟Arduino只需要3条数据连接线即可使用。</P>
+<P>DS1302数据手册可以看这里：<A href="http://www.maxim-ic.com/datasheet/index.mvp/id/2685/t/al">http://www.maxim-ic.com/datasheet/index.mvp/id/2685/t/al</A></P>
+<P>DS1302电路很简单，如果洞洞板自制的话，可以参考下图：</P>
+<P>&nbsp;</P>
+<P>连线方法：<BR>CE(DS1302 pin5) -&gt; Arduino D5<BR>IO(DS1302 pin6) -&gt; Arduino D6<BR>SCLK(DS1302 pin7) -&gt; Arduino D7<BR>Vcc2(DS1302 pin1) -&gt; Arduino +5v<BR>GND(DS1302 pin4) -&gt; Arduino GND</P>
+<P>使用前，先将下面的库文件解压到arduino-0023\libraries文件夹下面</P>
+<P>&nbsp;</P>
+<P>例子代码如下：</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>使用方法：</P>
+<P>打开Arduino串口调试器即可看到当前时间。如果需要调整时间的话，只需要在串口输入当前日期时间，以逗号分隔</P>
+<P>格式为：</P>
+<P><STRONG>年,月,日,时,分,秒,星期</STRONG></P>
+<P>星期数：Sunday=1，MOnday=2，...Saturday=7<BR>比如，今天是2011年11月17日11时23分40秒星期四<BR>填入2011,11,17,11,22,40,5即可</P>

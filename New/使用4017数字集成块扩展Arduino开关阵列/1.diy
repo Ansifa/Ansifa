@@ -1,0 +1,100 @@
+<Layout Type="Perfboard" Width="16" Height="11" Project="" Credits="" HideList="False">
+  <Switch Value="" X1="1" Y1="1" X2="4" Y2="1" Name="S1"/>
+  <Switch Value="" X1="1" Y1="2" X2="4" Y2="2" Name="S2"/>
+  <Switch Value="" X1="1" Y1="3" X2="4" Y2="3" Name="S3"/>
+  <Switch Value="" X1="1" Y1="4" X2="4" Y2="4" Name="S4"/>
+  <Switch Value="" X1="1" Y1="5" X2="4" Y2="5" Name="S5"/>
+  <Switch Value="" X1="1" Y1="6" X2="4" Y2="6" Name="S6"/>
+  <Switch Value="" X1="1" Y1="7" X2="4" Y2="7" Name="S7"/>
+  <Switch Value="" X1="1" Y1="8" X2="4" Y2="8" Name="S8"/>
+  <Switch Value="" X1="1" Y1="9" X2="4" Y2="9" Name="S9"/>
+  <Switch Value="" X1="1" Y1="10" X2="4" Y2="10" Name="S10"/>
+  <Jumper X1="1" Y1="1" X2="1" Y2="2" Name="J1"/>
+  <Jumper X1="1" Y1="3" X2="1" Y2="4" Name="J2"/>
+  <Jumper X1="1" Y1="5" X2="1" Y2="6" Name="J3"/>
+  <Jumper X1="1" Y1="7" X2="1" Y2="8" Name="J4"/>
+  <Jumper X1="1" Y1="7" X2="1" Y2="6" Name="J5"/>
+  <Jumper X1="1" Y1="4" X2="1" Y2="5" Name="J6"/>
+  <Jumper X1="1" Y1="2" X2="1" Y2="3" Name="J7"/>
+  <Jumper X1="1" Y1="8" X2="1" Y2="9" Name="J8"/>
+  <Jumper X1="1" Y1="9" X2="1" Y2="10" Name="J9"/>
+  <Jumper X1="1" Y1="10" X2="1" Y2="11" Name="J10"/>
+  
+  
+  <Diode Value="" X1="8" Y1="1" X2="5" Y2="1" Name="D1"/>
+  <Diode Value="" X1="8" Y1="2" X2="5" Y2="2" Name="D2"/>
+  <Diode Value="" X1="8" Y1="3" X2="5" Y2="3" Name="D3"/>
+  <Diode Value="" X1="8" Y1="4" X2="5" Y2="4" Name="D4"/>
+  <Diode Value="" X1="8" Y1="5" X2="5" Y2="5" Name="D5"/>
+  <Diode Value="" X1="8" Y1="6" X2="5" Y2="6" Name="D6"/>
+  <Diode Value="" X1="8" Y1="7" X2="5" Y2="7" Name="D7"/>
+  <Diode Value="" X1="8" Y1="8" X2="5" Y2="8" Name="D8"/>
+  <Diode Value="" X1="8" Y1="9" X2="5" Y2="9" Name="D9"/>
+  <Diode Value="" X1="8" Y1="10" X2="5" Y2="10" Name="D10"/>
+  
+  <IC Value="74HEF4017" X1="11" Y1="2" X2="14" Y2="9" Name="IC1"/>
+  
+  
+  <Jumper X1="8" Y1="1" X2="11" Y2="4" Name="J13"/>
+  <Jumper X1="8" Y1="2" X2="11" Y2="3" Name="J14"/>
+  <Jumper X1="8" Y1="3" X2="11" Y2="5" Name="J15"/>
+  <Jumper X1="8" Y1="4" X2="11" Y2="8" Name="J16"/>
+  <Jumper X1="8" Y1="5" X2="14" Y2="8" Name="J17"/>
+  
+  
+  <Jumper X1="11" Y1="2" X2="8" Y2="6" Name="J19"/>
+  <Jumper X1="8" Y1="7" X2="11" Y2="6" Name="J18"/>
+  <Jumper X1="8" Y1="8" X2="11" Y2="7" Name="J20"/>
+  
+  <Jumper X1="8" Y1="10" X2="14" Y2="7" Name="J22"/>
+  <Jumper X1="8" Y1="9" X2="9" Y2="9" Name="J21"/>
+  <Jumper X1="9" Y1="9" X2="9" Y2="10" Name="J23"/>
+  <Jumper X1="9" Y1="10" X2="14" Y2="10" Name="J24"/>
+  <Jumper X1="14" Y1="10" X2="14" Y2="9" Name="J25"/>
+  
+  
+  <Jumper X1="11" Y1="9" X2="12" Y2="9" Name="J28"/>
+  <Jumper X1="12" Y1="9" X2="12" Y2="1" Name="J29"/>
+  
+  
+  
+  <Resistor Value="100K" X1="15" Y1="5" X2="15" Y2="8" Name="R1"/>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <Jumper X1="15" Y1="8" X2="16" Y2="8" Name="J32"/>
+  
+  
+  <Jumper X1="12" Y1="1" X2="16" Y2="1" Name="J12"/>
+  <Jumper X1="14" Y1="2" X2="16" Y2="2" Name="J26"/>
+  <Jumper X1="14" Y1="3" X2="16" Y2="3" Name="J27"/>
+  
+  <Jumper X1="16" Y1="11" X2="1" Y2="11" Name="J11"/>
+  
+  
+  
+  <Text Value="GND" X1="17" Y1="1" Name="A1"/>
+  <Text Value="VCC" X1="17" Y1="2" Name="A2"/>
+  <Text Value="RST" X1="17" Y1="3" Name="A3"/>
+  <Text Value="CLK" X1="17" Y1="4" Name="A4"/>
+  
+  <Jumper X1="14" Y1="4" X2="16" Y2="4" Name="J30"/>
+  <Jumper X1="15" Y1="5" X2="15" Y2="1" Name="J31"/>
+  <Jumper X1="16" Y1="5" X2="16" Y2="11" Name="J33"/>
+  <Jumper X1="4" Y1="1" X2="5" Y2="1" Name="J34"/>
+  <Jumper X1="4" Y1="2" X2="5" Y2="2" Name="J35"/>
+  <Jumper X1="4" Y1="3" X2="5" Y2="3" Name="J36"/>
+  <Jumper X1="4" Y1="4" X2="5" Y2="4" Name="J37"/>
+  <Jumper X1="4" Y1="5" X2="5" Y2="5" Name="J38"/>
+  <Jumper X1="4" Y1="6" X2="5" Y2="6" Name="J39"/>
+  <Jumper X1="4" Y1="7" X2="5" Y2="7" Name="J40"/>
+  <Jumper X1="4" Y1="8" X2="5" Y2="8" Name="J41"/>
+  <Jumper X1="4" Y1="9" X2="5" Y2="9" Name="J42"/>
+  <Jumper X1="4" Y1="10" X2="5" Y2="10" Name="J43"/>
+</Layout>
